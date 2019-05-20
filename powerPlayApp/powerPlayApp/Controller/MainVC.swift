@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MainVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,5 +16,9 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func inventoryBtnWasPressed(_ sender: Any) {
+        guard let inventoryVC = storyboard?.instantiateViewController(withIdentifier: "InventoryVC") else { return }
+        presentDetail(inventoryVC)
+    }
 }
 
