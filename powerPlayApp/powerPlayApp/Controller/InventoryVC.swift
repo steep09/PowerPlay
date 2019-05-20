@@ -7,8 +7,7 @@
 //
 
 import UIKit
-
-let appDelegate = UIApplication.shared.delegate as? AppDelegate
+import CoreData
 
 class InventoryVC: UIViewController {
     
@@ -34,6 +33,39 @@ class InventoryVC: UIViewController {
         
     }
     
+    func fetch(completion: (_ complete: Bool) -> ()) {
+        guard let manageContext = appDelegate?.persistentContainer.viewContext else { return }
+        
+        let fetchRequest = NSFetchRequest<Inventory>(entityName: "Inventory")
+        
+        do {
+            inventory = try manageContext.fetch(fetchRequest)
+            completion(true)
+        } catch {
+            debugPrint("Could not fetch: \(error.localizedDescription)")
+            completion(false)
+        }
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchCoreDataObjects()
+        inventoryTableView.reloadData()
+    }
+    
+    func fetchCoreDataObjects() {
+        self.fetch{ (complete) in
+            if complete {
+                if inventory.count >= 1 {
+                    inventoryTableView.isHidden = false
+                } else {
+                    inventoryTableView.isHidden = true
+                }
+            }
+        }
+    }
+    
     @IBAction func addItemBtnWasPressed(_ sender: Any) {
         guard let addInventoryVC = storyboard?.instantiateViewController(withIdentifier: "AddInventoryVC") as? AddInventoryVC else { return }
         presentDetail(addInventoryVC)
@@ -49,7 +81,7 @@ class InventoryVC: UIViewController {
 extension InventoryVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return inventory.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
