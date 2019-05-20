@@ -17,6 +17,11 @@ class MainVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func supplierBtnWasPressed(_ sender: Any) {
+        guard let supplierVC = storyboard?.instantiateViewController(withIdentifier: "SupplierVC") else { return }
+        presentDetail(supplierVC)
+    }
+    
     @IBAction func inventoryBtnWasPressed(_ sender: Any) {
         guard let inventoryVC = storyboard?.instantiateViewController(withIdentifier: "InventoryVC") else { return }
         presentDetail(inventoryVC)
