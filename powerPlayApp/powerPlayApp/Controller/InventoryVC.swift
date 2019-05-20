@@ -90,4 +90,36 @@ extension InventoryVC: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
+    
+    func removeGoal(atIndexPath indexPath: IndexPath) {
+        guard let manageContext = appDelegate?.persistentContainer.viewContext else { return }
+        
+        manageContext.delete(inventory[indexPath.row])
+        
+        do {
+            try manageContext.save()
+        } catch {
+            debugPrint("Could not remove: \(error.localizedDescription)")
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .none
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
+            self.removeGoal(atIndexPath: indexPath)
+            self.fetchCoreDataObjects()
+            self.inventoryTableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+        
+        deleteAction.backgroundColor = #colorLiteral(red: 1, green: 0, blue: 0, alpha: 1)
+        return [deleteAction]
+    }
+    
 }
