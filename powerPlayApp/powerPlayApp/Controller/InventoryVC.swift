@@ -91,7 +91,7 @@ extension InventoryVC: UITableViewDelegate, UITableViewDataSource {
     }
     
     
-    func removeGoal(atIndexPath indexPath: IndexPath) {
+    func removeInventory(atIndexPath indexPath: IndexPath) {
         guard let manageContext = appDelegate?.persistentContainer.viewContext else { return }
         
         manageContext.delete(inventory[indexPath.row])
@@ -113,7 +113,7 @@ extension InventoryVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
-            self.removeGoal(atIndexPath: indexPath)
+            self.removeInventory(atIndexPath: indexPath)
             self.fetchCoreDataObjects()
             self.inventoryTableView.deleteRows(at: [indexPath], with: .automatic)
         }

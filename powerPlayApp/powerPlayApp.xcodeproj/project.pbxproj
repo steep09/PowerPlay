@@ -19,6 +19,7 @@
 		A77C41422292931C00650E6C /* UIVieControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77C41412292931C00650E6C /* UIVieControllerExt.swift */; };
 		A7FEB6352292F35600487A8E /* SupplierVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FEB6342292F35600487A8E /* SupplierVC.swift */; };
 		A7FEB6372292F70900487A8E /* AddSupplierVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FEB6362292F70900487A8E /* AddSupplierVC.swift */; };
+		A7FEBF0D2293B62B00AE7212 /* SupplierCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FEBF0C2293B62B00AE7212 /* SupplierCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		A77C41412292931C00650E6C /* UIVieControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVieControllerExt.swift; sourceTree = "<group>"; };
 		A7FEB6342292F35600487A8E /* SupplierVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplierVC.swift; sourceTree = "<group>"; };
 		A7FEB6362292F70900487A8E /* AddSupplierVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSupplierVC.swift; sourceTree = "<group>"; };
+		A7FEBF0C2293B62B00AE7212 /* SupplierCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplierCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				A75890AD228EAD4D0029EFAC /* ItemCell.swift */,
+				A7FEBF0C2293B62B00AE7212 /* SupplierCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 				A7FEB6372292F70900487A8E /* AddSupplierVC.swift in Sources */,
 				A75890B0228EADDE0029EFAC /* AddInventoryVC.swift in Sources */,
 				A70D8534228C073800D70F8F /* AppDelegate.swift in Sources */,
+				A7FEBF0D2293B62B00AE7212 /* SupplierCell.swift in Sources */,
 				A70D853C228C073800D70F8F /* powerPlayApp.xcdatamodeld in Sources */,
 				A75890AC228EABBC0029EFAC /* InventoryVC.swift in Sources */,
 			);
