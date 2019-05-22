@@ -17,6 +17,9 @@
 		A75890AE228EAD4D0029EFAC /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75890AD228EAD4D0029EFAC /* ItemCell.swift */; };
 		A75890B0228EADDE0029EFAC /* AddInventoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A75890AF228EADDE0029EFAC /* AddInventoryVC.swift */; };
 		A77C41422292931C00650E6C /* UIVieControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77C41412292931C00650E6C /* UIVieControllerExt.swift */; };
+		A7CA7A7322952F0A0001DC16 /* OrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CA7A7222952F0A0001DC16 /* OrderVC.swift */; };
+		A7CA7A7522952F1A0001DC16 /* AddOrderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CA7A7422952F1A0001DC16 /* AddOrderVC.swift */; };
+		A7CA7A7722952F290001DC16 /* AddOrderItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7CA7A7622952F290001DC16 /* AddOrderItemVC.swift */; };
 		A7FEB6352292F35600487A8E /* SupplierVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FEB6342292F35600487A8E /* SupplierVC.swift */; };
 		A7FEB6372292F70900487A8E /* AddSupplierVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FEB6362292F70900487A8E /* AddSupplierVC.swift */; };
 		A7FEBF0D2293B62B00AE7212 /* SupplierCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7FEBF0C2293B62B00AE7212 /* SupplierCell.swift */; };
@@ -35,6 +38,9 @@
 		A75890AD228EAD4D0029EFAC /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		A75890AF228EADDE0029EFAC /* AddInventoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInventoryVC.swift; sourceTree = "<group>"; };
 		A77C41412292931C00650E6C /* UIVieControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIVieControllerExt.swift; sourceTree = "<group>"; };
+		A7CA7A7222952F0A0001DC16 /* OrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderVC.swift; sourceTree = "<group>"; };
+		A7CA7A7422952F1A0001DC16 /* AddOrderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderVC.swift; sourceTree = "<group>"; };
+		A7CA7A7622952F290001DC16 /* AddOrderItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrderItemVC.swift; sourceTree = "<group>"; };
 		A7FEB6342292F35600487A8E /* SupplierVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplierVC.swift; sourceTree = "<group>"; };
 		A7FEB6362292F70900487A8E /* AddSupplierVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSupplierVC.swift; sourceTree = "<group>"; };
 		A7FEBF0C2293B62B00AE7212 /* SupplierCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplierCell.swift; sourceTree = "<group>"; };
@@ -91,6 +97,9 @@
 				A75890AF228EADDE0029EFAC /* AddInventoryVC.swift */,
 				A7FEB6342292F35600487A8E /* SupplierVC.swift */,
 				A7FEB6362292F70900487A8E /* AddSupplierVC.swift */,
+				A7CA7A7222952F0A0001DC16 /* OrderVC.swift */,
+				A7CA7A7422952F1A0001DC16 /* AddOrderVC.swift */,
+				A7CA7A7622952F290001DC16 /* AddOrderItemVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -188,11 +197,14 @@
 				A70D8536228C073800D70F8F /* MainVC.swift in Sources */,
 				A77C41422292931C00650E6C /* UIVieControllerExt.swift in Sources */,
 				A7FEB6372292F70900487A8E /* AddSupplierVC.swift in Sources */,
+				A7CA7A7522952F1A0001DC16 /* AddOrderVC.swift in Sources */,
 				A75890B0228EADDE0029EFAC /* AddInventoryVC.swift in Sources */,
 				A70D8534228C073800D70F8F /* AppDelegate.swift in Sources */,
 				A7FEBF0D2293B62B00AE7212 /* SupplierCell.swift in Sources */,
+				A7CA7A7322952F0A0001DC16 /* OrderVC.swift in Sources */,
 				A70D853C228C073800D70F8F /* powerPlayApp.xcdatamodeld in Sources */,
 				A75890AC228EABBC0029EFAC /* InventoryVC.swift in Sources */,
+				A7CA7A7722952F290001DC16 /* AddOrderItemVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
