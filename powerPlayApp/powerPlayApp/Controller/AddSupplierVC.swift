@@ -40,7 +40,7 @@ class AddSupplierVC: UIViewController {
         let supplier = Supplier(context: manageContext)
         
         supplier.supplierName = supplierNameTxtField.text
-        supplier.contactNumber = Int32(supplierContactNumber.text!)!
+        supplier.contactNumber = Int64(supplierContactNumber.text!)!
         do {
             try manageContext.save()
             completion(true)
